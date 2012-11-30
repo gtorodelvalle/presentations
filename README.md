@@ -2,10 +2,8 @@
 
 This is where I host the slides of the talks I give ;-)
 
-<ul>
-  <il><a href="http://gtorodelvalle.github.com/presentations/TypeScript/#/" target="_blank">TypeScript: Application-scale Javascript Development</a></il>
-  <il><a href="http://gtorodelvalle.github.com/presentations/Scripting%20On%20the%20Web/#/" target="_blank">Scripting On the Web</a></il>
-</ul>
+* <a href="http://gtorodelvalle.github.com/presentations/TypeScript/#/" target="_blank">TypeScript: Application-scale Javascript Development</a>
+* <a href="http://gtorodelvalle.github.com/presentations/Scripting%20On%20the%20Web/#/" target="_blank">Scripting On the Web</a>
 
 Enjoy!
 
