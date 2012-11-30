@@ -1,6 +1,6 @@
-# TYPESCRIPT: APLICATION-SCALE JAVASCRIPT DEVELOPMENT
+# PRESENTATIONS
 
-These are the slides I used in the talk I gave at the DevCon 1 conference organized by Telefónica Digital and held in Madrid on the 27th and 28th of November, 2012.
+This is where I host the slides of the talks I give ;-)
 
 Enjoy!
 
