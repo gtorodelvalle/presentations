@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>CLIENT-SIDE STORAGE APIs</h1>
+                <h2>Supporting Offline Web Apps... <br/> ...and Beyond</h2>
+                <p>Germán Toro del Valle (<a href="mailto:gtv@tid.es">gtv@tid.es</a>, <a href="https://twitter.com/gtorodelvalle" target="_blank">@gtorodelvalle</a>)</p>
+            </section>
+            <section>
+                <h2>WHY SHOULD I CARE</h2>
+                <div>
+                    <ol>
+                        <li>
+                            Do not take connectivity for granted (offline operation)
+                        </li>
+                        <li>
+                            Performance (avoid unneeded data download)
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <h2>THE OPTIONS</h2>
+                <div>
+                    <ol style="width: 100%;">
+                        <li>
+                            Web Storage API
+                        </li>
+                        <li>
+                            Web SQL Database API
+                        </li>
+                        <li>
+                            Indexed Database API
+                        </li>
+                        <li>
+                            File API
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <h2>COMMONALITIES</h2>
+                <div>
+                    <ul>
+                        <li>
+                            Data is stored in the client's hard drive
+                        </li>
+                        <li>
+                            Data is tied to an origin (protocol + domain [+ subdomain] + port)
+                        </li>
+                        <li>
+                            Limited storage size:
+                            <ul>
+                                <li>
+                                    Browser-specific 
+                                </li>
+                                <li>
+                                    Currently per origin and API
+                                </li>
+                                <li>
+                                    Increasable under user acceptance
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Web Storage API</h2>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Key / value pairs
+                        </li>
+                        <li>
+                            Objects provided:
+                            <ul>
+                                <li>
+                                    <font face="courier new">localStorage</font>
+                                </li>
+                                <li>
+                                    <font face="courier new">sessionStorage</font>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                <pre><code contenteditable>if (localStorage) {
+    // Storage.
+    localStorage.key = value;
+    // Retrieval.
+    console.log(localStorage.key);
+}</code></pre>
+                </div>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            <b><u>NOTE:</u></b> Values are stored as Strings (although the spec says otherwise)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Web SQL Database API</h2>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Structured database (with all the functionalities and complexities of SQL databases)
+                        </li>
+                        <li>
+                            Transaction-oriented
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <pre><code contenteditable>db = openDatabase('myDB', '1.0', 'My first Web SQL DB', 8192);
+db.transaction(function (tx) {
+  tx.executeSql("CREATE TABLE IF NOT EXISTS..." // SQL statement.
+    [], // Parameter array.
+    function onTXSuccess(transaction, results) { ... },
+    function onTXError(transaction, error) { ... }
+  );
+});</code></pre>
+                </div>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            <b><u>NOTE:</u></b> Deprecated (it won't be supported by Firefox or IE)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Indexed Database API</h2>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Result of previous experience with the Web Storage API and Web SQL Storage API:
+                            <ul>
+                                <li>
+                                    Storing and retrieving objects indexed by key (key / value pairs)
+                                </li>
+                                <li>
+                                    Transaction-oriented (auto-commit)
+                                </li>
+                                <li>
+                                    Asynchronous and synchronous (Web Workers) API
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <pre><code contenteditable>var request = window.indexedDB.open("MyFirstIndexedDB", 5);
+request.onerror = function(event) {
+  // Do something with request.errorCode!
+};
+request.onsuccess = function(event) {
+  // Do something with request.result!
+};</code></pre>
+                </div>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            <b><u>NOTE:</u></b> Visit <a href="https://developer.mozilla.org/en-US/docs/IndexedDB">https://developer.mozilla.org/en-US/docs/IndexedDB</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>File API</h2>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Focus on:
+                            <ul>
+                                <li> Large files</li>
+                                <li> Binary content</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Asynchronous and synchronous (Web Workers) API
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <pre><code contenteditable>window.requestFileSystem(/* type */ window.TEMPORARY, /* size */ 8192,
+    /* success */ initFS, /* error */ errorHandler);
+function initFS(fs){
+    fs.root.getDirectory('Docs', {create: true}, function(dirEntry) {
+        console.log(dirEntry.name + 'directory available');
+    }, errorHandler);
+}
+function errorHandler(){
+    console.log('An error occured');
+}</code></pre>
+                </div>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            <b><u>NOTE:</u></b> Very early specification (currently under discussion) (partial implementations + proprietary extensions)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>CONCLUSIONS</h2>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Always check:
+                            <ul>
+                                <li> Before:
+                                    <ul>
+                                        <li>
+                                            <a href="https://developer.mozilla.org/">https://developer.mozilla.org/</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://caniuse.com/">http://caniuse.com/</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://mobilehtml5.org/">http://mobilehtml5.org/</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.webplatform.org/">http://www.webplatform.org/</a> (near future)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li> In your code:
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <pre><code contenteditable>// In the following line, you should include the prefixes of
+// the implementations you want to support.
+window.indexedDB = window.indexedDB || window.mozIndexedDB ||
+    window.webkitIndexedDB || window.msIndexedDB;</code></pre>
+                </div>
+                <div>
+                    <ul style="width: 100%;">
+                        <li>
+                            Be prepared for and build the future: HTML 5.1 Nightly <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html">http://www.w3.org/html/wg/drafts/html/master/Overview.html</a>)
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <br>
+                <h1>Thanks! ;-)</h1>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+</body>
+</html>
