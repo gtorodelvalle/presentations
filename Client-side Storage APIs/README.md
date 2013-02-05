@@ -1,10 +1,10 @@
-# TYPESCRIPT: APLICATION-SCALE JAVASCRIPT DEVELOPMENT
+# CLIENT-SIDE STORAGE APIs
 
-These are the slides I used in the talk I gave at the DevCon 1 conference organized by Telefónica Digital and held in Madrid on the 27th and 28th of November, 2012.
+These are the slides I used in the talk I gave at the Firefox OS Apps Day organized by Mozilla and held in Barcelona (Spain) on the 26th of January, 2013.
 
 Enjoy!
 
 ________________________________________________
 
-Copyright (C) 2012 Germán Toro del Valle, <a href="https://twitter.com/gtorodelvalle" target="_blank">@gtorodelvalle</a>
+Copyright (C) 2013 Germán Toro del Valle, <a href="https://twitter.com/gtorodelvalle" target="_blank">@gtorodelvalle</a>
 
