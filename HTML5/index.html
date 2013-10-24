@@ -1,0 +1,4145 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>reveal.js - The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    </script>
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>html5
+            <br>
+          </h1>
+          <h2>building open web apps with</h2>
+          <h2>html, css and javascript
+            <br>
+          </h2>
+          <div>
+            <br>Germán Toro del Valle</div>
+          <div>gtorodelvalle@gmail.com
+            <br>
+          </div>
+          <div>
+            <a class="_hootified" a="" href="http://twitter.com/#!/@gtorodelvalle">@gtorodelvalle</a>
+            <br>
+            <br>Slides:
+            <a href="http://bit.ly/15kOoXW" target="_blank" class="bitmark-shortlink">
+              <span class="protocol">http://bit.ly/15kOoXW</span>
+            </a>
+            <br>
+            <br>
+          </div>
+        </section>
+        <section>
+          <section>
+            <h2>agenda</h2>
+            <ol>
+              <li>
+                <a href="#/2/0">Introduction</a>
+              </li>
+              <li>
+                <a href="#/3/0">What is HTML5?</a>
+              </li>
+              <li>
+                <a href="#/4/0">Getting started with HTML</a>
+              </li>
+              <ol type="i">
+                <li>
+                  <a href="#/4/1">Anatomy of an HTML element</a>
+                </li>
+                <li>
+                  <a href="#4/5">Anatomy of an HTML document</a>
+                </li>
+                <li>
+                  <a href="#/4/8">Element relationships and types</a>
+                </li>
+                <li>
+                  <a href="#/4/9">HTML entities</a>
+                </li>
+                <li>
+                  <a href="#/4/10">Global attributes</a>
+                </li>
+              </ol>
+            </ol>
+            <h3>
+              <span>
+                <br>
+              </span>
+            </h3>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="4">
+              <li>
+                <a href="#/5/0">Getting started with CSS</a>
+                <ol type="i">
+                  <li>
+                    <a href="#/5/1">Anatomy of a CSS selector</a>
+                  </li>
+                  <li>
+                    <a href="#/5/2">Applying a style</a>
+                  </li>
+                  <li>
+                    <a href="#/5/7">Importing a style</a>
+                  </li>
+                  <li>
+                    <a href="#/5/8">Character encoding</a>
+                  </li>
+                  <li>
+                    <a href="#/5/9">Styles cascading</a>
+                  </li>
+                  <li>
+                    <a href="#/5/12">Style inheritance</a>
+                  </li>
+                  <li>
+                    <a href="#/5/13">Colors</a>
+                  </li>
+                  <li>
+                    <a href="#/5/16">Lengths</a>
+                  </li>
+                  <li>
+                    <a href="#/5/16">Unit calculations</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="4">
+              <li>
+                <a href="#/5/0">Getting started with CSS</a>
+                <ol type="i" start="10">
+                  <li>
+                    <a href="#/5/17">Angles</a>
+                  </li>
+                  <li>
+                    <a href="#/5/18">Time</a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#/6/0">Getting started with Javascript</a>
+                <ol type="i">
+                  <li>
+                    <a href="#/6/0">Including scripts</a>
+                  </li>
+                  <li>
+                    <a href="#/6/2">Variables and types</a>
+                  </li>
+                  <li>
+                    <a href="#/6/3">Types</a>
+                  </li>
+                  <li>
+                    <a href="#/6/5">Objects</a>
+                  </li>
+                  <li>
+                    <a href="#/6/7">in expression</a>
+                  </li>
+                  <li>
+                    <a href="#/6/8">Numbers</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="4">
+              <li>
+                <a href="#/6/0">Getting started with Javascript</a>
+                <ol type="i" start="7">
+                  <li>
+                    <a href="#/6/11">Strings</a>
+                  </li>
+                  <li>
+                    <a href="#/6/14">Arrays</a>
+                  </li>
+                  <li>
+                    <a href="#/6/17">Functions</a>
+                  </li>
+                  <li>
+                    <a href="#/6/19">Operators</a>
+                  </li>
+                  <li>
+                    <a href="#/6/25">Loops</a>
+                  </li>
+                  <li>
+                    <a href="#/6/29">Handling errors</a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#/7/0">HTML elements in-depth</a>
+                <ol>
+                  <li>
+                    <a href="#/7/1">Preliminary recomendations</a>
+                  </li>
+                  <li>
+                    <a href="#/7/2">HTML cheat sheet</a>
+                  </li>
+                  <li>
+                    <a href="#/7/3">Document and metadata elements</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="5">
+              <li>
+                <a href="#/7/0">HTML elements in-depth</a>
+                <ol start="4">
+                  <li>
+                    <a href="#/7/4">Metadata elements</a>
+                  </li>
+                  <li>
+                    <a href="#/7/10">Section elements</a>
+                  </li>
+                  <li>
+                    <a href="#/7/13">Forms</a>
+                  </li>
+                  <li>
+                    <a href="#/7/22">Text level elements</a>
+                  </li>
+                  <li>
+                    <a href="#/7/29">Grouping &nbsp;elements</a>
+                  </li>
+                  <li>
+                    <a href="#/7/33">Embedding content</a>
+                  </li>
+                  <li>
+                    <a href="#/7/35">Embedding content using plugins</a>
+                  </li>
+                  <li>
+                    <a href="#/7/37">Embedding media</a>
+                  </li>
+                  <li>
+                    <a href="#/7/39">Embedding numeric representations</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="6">
+              <li>
+                <a href="#/8/0">CSS Styling in-depth</a>
+                <ol>
+                  <li>
+                    <a href="#/8/0">CSS cheat sheet</a>
+                  </li>
+                  <li>
+                    <a href="#/8/1">CSS selectors quick reference</a>
+                  </li>
+                  <li>
+                    <a href="#/8/2">Box model</a>
+                  </li>
+                  <li>
+                    <a href="#/8/3">Background</a>
+                  </li>
+                  <li>
+                    <a href="#/8/4">Padding</a>
+                  </li>
+                  <li>
+                    <a href="#/8/5">Border</a>
+                  </li>
+                  <li>
+                    <a href="#/8/6">Margin</a>
+                  </li>
+                  <li>
+                    <a href="#/8/7">Outline</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="6">
+              <li>
+                <a href="#/8/0">CSS Styling in-depth</a>
+                <ol start="9">
+                  <li>
+                    <a href="#/8/8">Positioning</a>
+                  </li>
+                  <li>
+                    <a href="#/8/9">Box</a>
+                  </li>
+                  <li>
+                    <a href="#/8/10">Flexible box</a>
+                  </li>
+                  <li>
+                    <a href="#/8/11">Multi-column</a>
+                  </li>
+                  <li>
+                    <a href="#/8/12">Color</a>
+                  </li>
+                  <li>
+                    <a href="#/8/13">Text</a>
+                  </li>
+                  <li>
+                    <a href="#/8/14">Fonts</a>
+                  </li>
+                  <li>
+                    <a href="#/8/15">Hyperlinks</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="6">
+              <li>
+                <a href="#/8/0">CSS Styling in-depth</a>
+                <ol start="17">
+                  <li>
+                    <a href="#/8/16">2D / 3D Transforms</a>
+                  </li>
+                  <li>
+                    <a href="#/8/17">Transitions</a>
+                  </li>
+                  <li>
+                    <a href="#/8/18">Animations</a>
+                  </li>
+                  <li>
+                    <a href="#/8/19">User-interface</a>
+                  </li>
+                  <li>
+                    <a href="#/8/19">Media queries</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="7">
+              <li>
+                <a href="#/9/0">Javascript in-depth</a>
+                <ol start="1">
+                  <li>
+                    <a href="#/9/1">Javascript (in the browser) cheat sheet</a>
+                  </li>
+                  <li>
+                    <a href="#/9/2">DOM cheat sheet</a>
+                  </li>
+                  <li>
+                    <a href="#/9/3">Document metadata properties</a>
+                  </li>
+                  <li>
+                    <a href="#/9/4">Document location properties</a>
+                  </li>
+                  <li>
+                    <a href="#/9/5">Accessing HTML elements via document's properties</a>
+                  </li>
+                  <li>
+                    <a href="#/9/6">Searching for HTML elements</a>
+                  </li>
+                  <li>
+                    <a href="#/9/7">Navigating the DOM</a>
+                  </li>
+                  <li>
+                    <a href="#/9/8">Getting information about the window</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="7">
+              <li>
+                <a href="#/9/0">Javascript in-depth</a>
+                <ol start="9">
+                  <li>
+                    <a href="#/9/9">Interacting with the window</a>
+                  </li>
+                  <li>
+                    <a href="#/9/10">Prompting the user</a>
+                  </li>
+                  <li>
+                    <a href="#/9/11">Browser history</a>
+                  </li>
+                  <li>
+                    <a href="#/9/12">Using timers</a>
+                  </li>
+                  <li>
+                    <a href="#/9/13">Accessing windows</a>
+                  </li>
+                  <li>
+                    <a href="#/9/14">Cross-document messaging (sender)</a>
+                  </li>
+                  <li>
+                    <a href="#/9/15">Cross-document messaging (listener)</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+          <section>
+            <h2>agenda</h2>
+            <h3>
+              <span>...</span>
+            </h3>
+            <ol start="7">
+              <li>
+                <a href="#/9/0">Javascript in-depth</a>
+                <ol start="17">
+                  <li>
+                    <a href="#/9/9">Interacting with the window</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+            <h3>
+              <span>...</span>
+            </h3>
+          </section>
+        </section>
+        <section>
+          <h2>1. INTRODUCTION</h2>
+          <blockquote data-fragment-index="0" class="fragment">This course covers HTML5 from the ground up, trying to avoid all the
+            <u>padding</u>;-)
+            <br>
+          </blockquote>
+          <br>
+          <blockquote data-fragment-index="1" class="fragment">Example-oriented course</blockquote>
+          <br>
+          <blockquote data-fragment-index="2" class="fragment">We'll provide you with the tools you need to become an HTML Ninja :-O</blockquote>
+          <br>
+          <blockquote data-fragment-index="3" class="fragment">Ongoing work... just as the specifications ;-)</blockquote>
+        </section>
+        <section>
+          <section>
+            <h2>2. What is HTML5?</h2>
+            <div>
+              <ul style="float: left;">
+                <li class="fragment" data-fragment-index="0">So, what is HTML5?
+                  <ul>
+                    <li>HTML5 is a family of technologies and specifications:</li>
+                    <ul>
+                      <li>
+                        <b>
+                          <u>HTML</u>
+                        </b>:
+                        <i>structure</i>of the pages</li>
+                      <li>
+                        <b>
+                          <u>CSS</u>
+                        </b>: style or
+                        <i>appearance</i>of the pages</li>
+                      <li>
+                        <b>
+                          <u>Javascript</u>
+                        </b>:
+                        <i>programming language</i>(interactivity, content manipulation, data consumption, etc.)</li>
+                    </ul>
+                  </ul>
+                </li>
+                <li class="fragment" data-fragment-index="1">The Web platform:
+                  <ul>
+                    <li>
+                      <a href="http://platform.html5.org/" target="_blank">http://platform.html5.org/</a>
+                      <br>
+                    </li>
+                    <ul></ul>
+                  </ul>
+                </li>
+                <li class="fragment" data-fragment-index="2">Current status:
+                  <ul>
+                    <li>Just check it out yourself:</li>
+                    <ul>
+                      <li>
+                        <a href="http://caniuse.com/" target="_blank">http://caniuse.com/</a>
+                      </li>
+                      <li>
+                        <a href="http://mobilehtml5.org/" target="_blank">http://mobilehtml5.org/</a>&nbsp;(
+                        <span style="font-size: 35.61253356933594px; font-style: normal; font-variant: normal;">Do not forget mobile!)&nbsp;</span>
+                      </li>
+                    </ul>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>2. What is HTML5?</h2>
+            <div>
+              <a href="http://media-cache-ak2.pinimg.com/736x/7f/66/7e/7f667ed21ea8567bfae4dcf414cb177f.jpg" target="_blank">
+                <img src="http://media-cache-ak2.pinimg.com/736x/7f/66/7e/7f667ed21ea8567bfae4dcf414cb177f.jpg" style="">
+              </a>
+              <br>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>3. Getting started with html</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML is a
+                  <i>mark-up language</i>
+                </li>
+                <li>Anatomy of a HTML element:
+                  <ul>
+                    <li>
+                      <i>Tags</i>
+                    </li>
+                    <li>
+                      <i>Content</i>
+                    </li>
+                    <li>
+                      <i>Attributes</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/rdvLl">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML is a
+                  <i>mark-up language</i>
+                </li>
+                <li>Anatomy of an HTML element:
+                  <ul>
+                    <li>
+                      <i>Tags</i>
+                    </li>
+                    <li>
+                      <i>Content</i>
+                    </li>
+                    <li>
+                      <i>Attributes</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HeIdx">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML is a
+                  <i>mark-up language</i>
+                </li>
+                <li>Anatomy of an HTML element:
+                  <ul>
+                    <li>
+                      <i>Tags</i>
+                    </li>
+                    <li>
+                      <i>Content</i>
+                    </li>
+                    <li>
+                      <i>Attributes</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ukzGJ">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML is a
+                  <i>mark-up language</i>
+                </li>
+                <li>Anatomy of a HTML element:
+                  <ul>
+                    <li>
+                      <i>Tags</i>
+                    </li>
+                    <li>
+                      <i>Content</i>
+                    </li>
+                    <li>
+                      <i>Attributes</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ybjik">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML is a
+                  <i>mark-up language</i>
+                </li>
+                <li>Anatomy of a HTML element:
+                  <ul>
+                    <li>
+                      <i>Tags</i>
+                    </li>
+                    <li>
+                      <i>Content</i>
+                    </li>
+                    <li>
+                      <i>Attributes</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nGKkg">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML document:</li>
+                <ul>
+                  <li>Text file</li>
+                  <li>.html (convention)</li>
+                </ul>
+                <li>Anatomy of an HTML document (
+                  <b>outer&nbsp;structure</b>):</li>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/vqyts">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML document:</li>
+                <ul>
+                  <li>Text file</li>
+                  <li>.html (convention)</li>
+                </ul>
+                <li>Anatomy of an HTML document (
+                  <b>metadata</b>):</li>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Bektx">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML document:</li>
+                <ul>
+                  <li>Text file</li>
+                  <li>.html (convention)</li>
+                </ul>
+                <li>Anatomy of an HTML document (
+                  <b>content</b>):</li>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nmkAw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Element relationships:</li>
+                <ul>
+                  <li>Parent</li>
+                  <li>Child</li>
+                  <li>Descendants</li>
+                  <li>Siblings</li>
+                </ul>
+                <li>Document tree (
+                  <a href="http://livedom.validator.nu/" target="_blank">http://livedom.validator.nu/</a>)</li>
+                <li>Element types:</li>
+              </ul>
+            </div>
+            <div>
+              <br>
+            </div>
+            <div>
+              <img src="http://www.vanseodesign.com/blog/wp-content/uploads/2011/07/brcontent-venn.png">
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML entities:</li>
+                <ul>
+                  <li>Allow using reserved characters in texts</li>
+                  <li>Formatting:</li>
+                  <ul>
+                    <li>&amp;entity_name;</li>
+                    <li>&amp;
+                      <a class="_hootified" a="" href="#">#entity_number</a>;</li>
+                  </ul>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nedFt">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#the-accesskey-attribute">accesskey</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Keyboard shortcut to select elements on the page</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/KvcpL">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/dom.html#classes">class</a>&nbsp;</i>:</li>
+                  <ul>
+                    <li>Categorize elements</li>
+                    <li>Multiple classes</li>
+                    <li>Does nothing per se</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ktopy">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#attr-contenteditable">contenteditable</a>&nbsp;</i>:</li>
+                  <ul>
+                    <li>Let the visitor change the content of the page</li>
+                    <li>Values: "true" or "false"</li>
+                    <li>No value: inherits it from parent</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/oCgFd">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/interactive-elements.html#attr-contextmenu">contextmenu</a>&nbsp;</i>:</li>
+                  <ul>
+                    <li>The menu pops up when the user triggers it</li>
+                    <li>Supported by Firefox</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/CDzlm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/dom.html#the-dir-attribute">dir</a>&nbsp;</i>:</li>
+                  <ul>
+                    <li>Direction of the text</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cJewx">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#the-draggable-attribute">draggable</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Specifies if an element is draggable or not</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ewubq">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#the-dropzone-attribute">dropzone</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Specifies whether the dragged data is copied, moved or linked, when it is dropped on the element</li>
+                    <li>Not currently supported by any of the major browsers</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wJDmL">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#the-hidden-attribute">hidden</a>
+                    </i>:</li>
+                  <ul>
+                    <li>The element is not yet, or is no longer, relevant</li>
+                    <li>The element should not be shown</li>
+                    <li>Space not reserved</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/akfsy">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://dev.w3.org/html5/spec-preview/global-attributes.html#the-id-attribute">id</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Assigns a unique identifier to the element</li>
+                    <li>Must be unique within the HTML document</li>
+                    <li>Navigation to the element via
+                      <a class="_hootified" a="" href="#">#id</a>
+                    </li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/efbBG">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://dev.w3.org/html5/spec-preview/global-attributes.html#the-lang-and-xml:lang-attributes">lang</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Specifies the language of the element's content</li>
+                    <li>Must be a valid ISO value</li>
+                    <li>Let the browser adjust the display of the content</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/mHhGj">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#attr-spellcheck">spellcheck</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Specifies if the browser should check the spelling of the element's content</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wqHdt">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://dev.w3.org/html5/markup/global-attributes.html#common.attrs.style">style</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Allows to define CSS styles directly on an element</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ifygw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/editing.html#sequential-focus-navigation-and-the-tabindex-attribute">tabindex</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Order in which the Tab key moves the focus through the elements</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nxDHI">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">3. GETTING STARTED WITH HTML</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Global attributes:</li>
+                <ul>
+                  <li>
+                    <i>
+                      <a href="http://www.w3.org/TR/html5/dom.html#the-title-attribute">title</a>
+                    </i>:</li>
+                  <ul>
+                    <li>Provides additional information about an element</li>
+                    <li>Commonly used to show tool tip information</li>
+                  </ul>
+                </ul>
+                <ul></ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/moCiG">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div>
+              <ul>
+                <li>Cascading Style Sheets (CSS)</li>
+                <li>Specifies the appearance and formatting of an HTML document</li>
+                <li>No CSS specification but modules</li>
+                <li>Browser-specific prefixes:
+                  <ul>
+                    <li>Firefox: -moz-</li>
+                    <li>Internet Explorer: -ms-</li>
+                    <li>Opera: -o-</li>
+                    <li>Webkit (Chrome, Safari): -webkit-</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Anatomy of a CSS style:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/DGkuv">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ol>
+                <li>Applying a style (
+                  <b>style attribute</b>):</li>
+              </ol>
+              <ul></ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/kFJid">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ol start="2">
+                <li>Applying a style (
+                  <b>style element</b>):</li>
+              </ol>
+              <ul></ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xziKe">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ol start="3">
+                <li>Applying a style (
+                  <b>external stylesheet</b>):
+                  <ul>
+                    <li>Style file loading order is important (the latest will be applied)</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Kfmeg">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ol start="4">
+                <li>Applying a style (
+                  <b>browser styles&nbsp;</b>or&nbsp;
+                  <b>user agent styles</b>):
+                  <ul>
+                    <li>Default values applied by the browser</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hBsLw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ol start="5">
+                <li>Applying a style (
+                  <b>user styles</b>):
+                  <ul>
+                    <li>Proprietary mechanism by browser</li>
+                    <ul>
+                      <li>In Firefox:
+                        <ul>
+                          <li>File in user's profile:
+                            <ul>
+                              <li>\chrome\userContent.css</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>In Chrome: file in user's profile:
+                        <ul>
+                          <li>\Default\User StyleSheets\Custom.css</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <li>Will be applied to any site the user visits</li>
+                    <li>Overrides the default browser or user agent styles</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Importing style files:
+                  <ul>
+                    <li>Not widely known</li>
+                    <li>Generally, worse performance in browsers than &lt;link&gt;</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/oEaqI">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Character encoding:
+                  <ul>
+                    <li>Only information which can come before
+                      <a class="_hootified" a="" href="http://twitter.com/#!/@import">@import</a>
+                    </li>
+                    <li>If not specified, the one in the HTML document applies</li>
+                    <li>If not specified in the HTML document, UTF-8 by default</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/BHKep">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Styles cascading:
+                  <ol>
+                    <li>Inline styles (author styles)</li>
+                    <li>Embed styles (author styles)</li>
+                    <li>External styles (author styles)</li>
+                    <li>User styles</li>
+                    <li>Browser styles</li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ewizd">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Adjusting the default styles cascading:
+                  <ul>
+                    <li>Prioritize important styles no matter where they have been defined</li>
+                    <li>Important user styles applied over author styles</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/euDGr">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Tie breaking:
+                  <ul>
+                    <li>More than 1 style defined at the same level that can be applied to the same element</li>
+                  </ul>
+                </li>
+                <li>Specificity breaks the tie break (a-b-c):
+                  <ul>
+                    <li>Number of id values (a)</li>
+                    <li>Number of other attributes and pseudo-classes (b)</li>
+                    <li>Number of element names and pseudo-elements (c)</li>
+                  </ul>
+                </li>
+                <li>If same specificity, then order of appearance (latest apply)</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wlDbE">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Style inheritance:
+                  <ul>
+                    <li>If no style for a property of an element, the parent element's property style applies</li>
+                    <li>This rule applies to appearance styles</li>
+                    <li>This rule does NOT apply to layout styles
+                      <ul>
+                        <li>Can be forced with the
+                          <i>inherit</i>value</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/sIzcF">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left;">
+              <ul start="3">
+                <li>Colors:
+                  <ul>
+                    <li>Name</li>
+                    <li>Decimal (red, green, blue): separated by ,</li>
+                    <li>Hexadecimal (red, green, blue): starting with #</li>
+                    <li>
+                      <a href="http://www.w3.org/TR/css3-color/">http://www.w3.org/TR/css3-color/</a>
+                      <br>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/mhwHK">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Color functions:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/yjLrd">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Lengths:
+                  <ul>
+                    <li>number_of_units+unit (no spaces in between)</li>
+                    <li>
+                      <u>
+                        <b>Absolute</b>
+                      </u>:
+                      <i>in</i>,
+                      <i>cm</i>,
+                      <i>mm</i>,
+                      <i>pt</i>(1/72 of an inch),
+                      <i>pc</i>(pica, 12 pt)</li>
+                    <li>
+                      <u>
+                        <b>Relative</b>
+                      </u>:
+                      <i>em</i>(font size of element),
+                      <i>ex</i>('x-height' of element's font),
+                      <i>rem</i>(font size of root element),
+                      <i>
+                        <a href="http://www.w3.org/TR/css3-values/#reference-pixel">px</a>
+                      </i>(96dpi displays, 1/96 of an inch),
+                      <i>%</i>(another concrete property), and others (
+                      <i>gd</i>,
+                      <i>vw</i>,
+                      <i>vh</i>,
+                      <i>vm</i>,
+                      <i>ch</i>) not widely supported</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/JLeoF">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Unit calculations:
+                  <ul>
+                    <li>Mixing other units and perform basic arithmetic</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/JjqFe">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Angles:
+                  <ul>
+                    <li>Useful when using transforms</li>
+                    <li>
+                      <i>deg</i>(0 - 360),
+                      <i>grad</i>(0 - 400),
+                      <i>rad</i>(0 - 6.28),
+                      <i>turn</i>(1 = 360deg)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nDzej">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with css</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Time:
+                  <ul>
+                    <li>Useful for transitions and animations</li>
+                    <li>
+                      <i>s</i>,
+                      <i>ms</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/AlzCG">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Programming language of the Web</li>
+                <li>Case sensitive</li>
+                <li>Including scripts in an HTML document (
+                  <b>inline script</b>):
+                  <br>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Gondy">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Programming language of the Web</li>
+                <li>Case sensitive</li>
+                <li>Including scripts in an HTML document (
+                  <b>external script</b>):
+                  <br>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/BscAK">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Variables and Types:</li>
+                <ul>
+                  <li>Javascript is a loosely typed language:
+                    <ul>
+                      <li>Assigning different types to the same variable</li>
+                    </ul>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/dgaie">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Types:</li>
+                <ul>
+                  <li>Primitive types:
+                    <i>
+                      <u>Boolean</u>
+                    </i>,
+                    <i>
+                      <u>Number</u>
+                    </i>,
+                    <i>Null</i>,
+                    <i>
+                      <u>String</u>
+                    </i>,
+                    <i>Undefined</i>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/aCweB">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Types:</li>
+                <ul>
+                  <li>Primitive types:
+                    <i>Boolean</i>,
+                    <i>Number</i>,
+                    <i>
+                      <u>Null</u>
+                    </i>,
+                    <i>String</i>,
+                    <i>
+                      <u>Undefined</u>
+                    </i>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/joFxd">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Objects:
+                  <ul>
+                    <li>Object instantiation (
+                      <i>new</i>keyword)</li>
+                    <li>Adding properties</li>
+                    <li>Deleting properties</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/FdExD">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Objects:
+                  <ul>
+                    <li>Object literal format</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hoknu">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>
+                  <i>in</i>expression:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/rhytv">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Numbers:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xhJcw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Numbers:
+                  <ul>
+                    <li>Number literals</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zfdJp">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Numbers:
+                  <ul>
+                    <li>Built-in properties and methods (most common)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/rchqn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Strings:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/uvybm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Strings:
+                  <ul>
+                    <li>String literals</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/idDhn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Strings:
+                  <ul>
+                    <li>Built-in properties and methods (most common)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/DiyKq">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Arrays:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wBanj">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Arrays:
+                  <ul>
+                    <li>Array literals</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zahEn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Arrays:
+                  <ul>
+                    <li>Built-in properties and methods (most common)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cvEkz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Functions:
+                  <ul>
+                    <li>Declaration and invocation</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zpyIs">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Functions:
+                  <ul>
+                    <li>
+                      <a href="http://en.wikipedia.org/wiki/First-class_function">First class objects</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Fdulj">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Arithmetic operators</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zfnGg">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Assignment operators</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/jboBv">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Comparison operators
+                      <ul>
+                        <li>Primitives types are compared by value</li>
+                        <li>Objects are compared by reference</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/fkumb">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Concatenation operator (precedence over the arithmetic one)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ciqrD">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Conditional operator (ternary)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/oFajm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Operators (most useful):
+                  <ul>
+                    <li>Logical operators</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xjEJr">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Loops:
+                  <ul>
+                    <li>
+                      <i>for</i>loop</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ChIar">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Loops:
+                  <ul>
+                    <li>
+                      <i>for ... in</i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/niaGD">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Loops:
+                  <ul>
+                    <li>
+                      <i>do</i>/
+                      <i>while</i>loop</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Elprm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Loops:
+                  <ul>
+                    <li>
+                      <i>while</i>loop</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/oprhI">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>4. getting started with Javascript</h2>
+            <div style="float: left; margin-bottom: 1rem;">
+              <ul>
+                <li>Handling errors:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nIFjb">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div>
+              <ul>
+                <li>The most important change in HTML5 is a&nbsp;philosophical&nbsp;one:
+                  <ul>
+                    <li>Semantics of elements vs. presentation</li>
+                    <ul>
+                      <li>Ex.:
+                        <i>&lt;b&gt;</i>no longer states text in bold (backwards compatibility, preferably avoid them using CSS)</li>
+                    </ul>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <blockquote cite="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-b-element">"The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document abstract, product names in a review, actionable words in interactive text-driven software, or an article lede."</blockquote>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div>
+              <ul>
+                <li>Some preliminary recommendations:
+                  <ul>
+                    <li>Add only the needed markup to give semantic significance to your content</li>
+                    <li>Avoid using private semantics (use generic elements instead: &lt;div&gt;, &lt;span&gt;) and/or classes</li>
+                    <li>Be as specific as possible (don't abuse of generic elements)</li>
+                    <li>It's not all about presentation (programatic access to HTML content, adapted presentation, etc.)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://overapi.com/html/">HTML cheat sheet</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://overapi.com/html/">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Document and metadata elements:
+                  <ul>
+                    <li>Create the superstructure of the HTML document</li>
+                    <li>Provide information to the browser</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/gLpsC">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_base.asp">base</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/uEgkJ">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_meta.asp">meta</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/luwyn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_style.asp">style</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/djECH">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_link.asp">link</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cFflz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_script.asp">script</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cjzfF">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Metadata elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_noscript.asp">noscript</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/vAmxe">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Section elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_address.asp" target="_blank">address</a>,
+                        <a href="http://www.w3schools.com/tags/tag_aside.asp" target="_blank">aside</a>,
+                        <a href="http://www.w3schools.com/tags/tag_details.asp" target="_blank">details</a>,
+                        <a href="http://www.w3schools.com/tags/tag_footer.asp" target="_blank">footer</a>,
+                        <a href="http://www.w3schools.com/tags/tag_header.asp" target="_blank">header</a>,
+                        <a href="http://www.w3schools.com/tags/tag_nav.asp" target="_blank">nav</a>,
+                        <a href="http://www.w3schools.com/tags/tag_summary.asp" target="_blank">summary</a>
+                      </i>(in body)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/nFcEb">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Section elements:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/default.asp">address, article, aside, details, footer, header, nav, section, summary</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/CAKIz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Section elements:
+                  <ul>
+                    <li>Basic headings
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/tag_hn.asp">h1, h2, h3, h4, h5, h6, hgroup</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xHpvh">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_form.asp">form</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/sClpB">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_input.asp">input</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xKkaf">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_button.asp">button</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/fnzgC">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_label.asp">label</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/AlEkm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_fieldset.asp">fieldset</a>,
+                        <a href="http://www.w3schools.com/tags/tag_legend.asp">legend</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/gIfzD">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_optgroup.asp">optgroup</a>,
+                        <a href="http://www.w3schools.com/tags/tag_option.asp">option</a>,
+                        <a href="http://www.w3schools.com/tags/tag_select.asp">select</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/liBkC">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_textarea.asp">textarea</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hzBvf">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_output.asp">output</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/IxLrn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/html/html_forms.asp">Forms:</a>
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_keygen.asp">keygen</a>
+                      </i>(inside and outside &lt;form&gt;)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/vLziw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Hyperlinks
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/tag_a.asp">a</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/DldIx">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Importance
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">b, em, i, s, small, strong, sub, sup</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HujGh">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Break elements
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">br, wbr</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/burHB">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Input and output elements
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">code, kbd, samp, var</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/lpLez">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Abbreviations, citations, definitions and quotations
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">abbr, cite, dfn, q</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/exJfH">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Language elements
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">bdi, bdo, rp, ruby, rt</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/brpqH">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Text-level elements:
+                  <ul>
+                    <li>Other elements
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">del, ins, mark, span, time</a>&nbsp;</i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/DtAjL">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Grouping elements:
+                  <ul>
+                    <li>Browsers collapse whitespace characters in 1 space</li>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/default.asp">blockquote, div, hr, p, pre</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hgFCm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Grouping elements:
+                  <ul>
+                    <li>Lists
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/html/html_lists.asp">li, ol, ul</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/JeKfb">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Grouping elements:
+                  <ul>
+                    <li>Description lists
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/default.asp">dd, dl, dt</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/CeqoA">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Grouping elements:
+                  <ul>
+                    <li>Figure
+                      <ul>
+                        <li>
+                          <i>
+                            <a href="http://www.w3schools.com/tags/tag_figure.asp">figcaption, figure</a>
+                          </i>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Cvwup">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding content:
+                  <ul>
+                    <li>Images:
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_area.asp">area</a>
+                      </i>,
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_img.asp">img</a>
+                      </i>,
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_map.asp">map</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/rLAdj">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding content:
+                  <ul>
+                    <li>HTML content:
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_area.asp">iframe</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/npfbh">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding content using plugins:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_embed.asp">embed</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HnjIy">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding content using plugins:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_object.asp">object</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cvCIl">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding media:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_audio.asp">audio</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/iqHal">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding media:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_video.asp">video</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/yAwzm">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. HTML elements in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Embedding numeric representations:
+                  <ul>
+                    <li>
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_meter.asp">meter</a>
+                      </i>,
+                      <i>
+                        <a href="http://www.w3schools.com/tags/tag_progress.asp">progress</a>
+                      </i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/curiK">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://overapi.com/css/">CSS cheat sheet</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://overapi.com/css/">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/cssref/css_selectors.asp">CSS selectors quick reference</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ALGyn">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/css/css_boxmodel.asp">Box model</a>:</li>
+              </ul>
+            </div>
+            <br>
+            <br>
+            <div>
+              <img src="http://www.mandalatv.net/itp/drivebys/css/lib/img/box_model.gif" style="">
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#background">Background</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/gbrIk">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#padding">Padding</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/bisam">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#border">Border</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zLEIo">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#margin">Margin</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cfEzt">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#outline">Outline</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/AJuzr">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#positioning">Positioning</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/BCaym">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#box">Box</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/mvArw">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#flexbox">Flexible Box</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Geirz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#multicol">Multi-column</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/KHpxg">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#color">Color</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Ivxun">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#text">Text</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/qslbz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#font">Fonts</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/JtBGb">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#hyperlink">Hyperlinks</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/tgwon">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#3Dtransform">2D / 3D Transforms</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xiopB">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#transition">Transitions</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/EzIHq">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#animation">Animation</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/eIAqB">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://www.w3schools.com/CSSref/default.asp">CSS properties quick reference</a>:
+                  <ul>
+                    <li>
+                      <a href="http://www.w3schools.com/CSSref/default.asp#userinterface">User-interface</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/GtoJu">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media queries</a>:
+                  <ul>
+                    <li>Limits the style sheets' scope by using media features, such as width, height, and color</li>
+                    <li>Separated by commas</li>
+                    <li>Composed of:
+                      <ul>
+                        <li>Logical operators</li>
+                        <li>Media types</li>
+                        <li>Media expressions: feature and value</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>5. CSS styling in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media queries</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HmKbv">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">6. JAVASCRIPT IN DEPTH</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Javascript is much more than ECMA-262 (not tied to browsers)</li>
+                <li>Extensions:
+                  <ul>
+                    <li>Additional functionality more specific to the environment</li>
+                    <li>
+                      <a href="http://www.w3schools.com/js/js_window.asp">Browser Object Model (BOM)</a>:
+                      <ul>
+                        <li>API to interact with the browser</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="http://www.w3schools.com/dom/dom_intro.asp">Document Object Model (DOM)</a>:
+                      <ul>
+                        <li>API to interact with an HTML document</li>
+                        <li>Levels (versions of the spec.)</li>
+                        <li>Distinct support by browsers</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="http://overapi.com/javascript/">Javascript (in the browser) cheat sheet</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://overapi.com/javascript/">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">6. JAVASCRIPT IN DEPTH</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <a href="https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference">DOM cheat sheet</a>:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://overapi.com/html-dom/">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>document metadata properties:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/uEFBl">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>document location properties:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Dqwbv">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Accessing HTML elements via document's properties:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/inKDr">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Searching for HTML elements:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/uadJi">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Navigating the DOM:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/aviJx">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Getting information about the window:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/IxzuD">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Interacting with the window:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/FAGcH">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Prompting the user:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Idanf">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Browser history:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/mhkdG">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using timers:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HtCwy"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Accessing windows:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/gxhKz">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Cross-document messaging (sender):</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/lEubC">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Cross-document messaging (listener):</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wlmvr">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;nbsp;</iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with DOM elements:
+                  <ul>
+                    <li>Element data properties:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/jKrvh"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with DOM elements:
+                  <ul>
+                    <li>Working with classes:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/qgdko"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with DOM elements:
+                  <ul>
+                    <li>Element attribute properties:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/GDhcg"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with Text elements:</li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/pAnyd"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Modifying the model:
+                  <ul>
+                    <li>Basic functions and properties:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hondb"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Styling DOM elements:
+                  <ul>
+                    <li>Working with stylesheets:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/zbLoG"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>An event is a change in the state of something</li>
+                    <li>Element event flow:
+                      <ul>
+                        <li>Capture:
+                          <ul>
+                            <li>Checks if elements between the &lt;body&gt; and the target have event listeners which asked to be notified of events of their descendants. Disabled by default</li>
+                          </ul>
+                        </li>
+                        <li>Target:</li>
+                        <ul>
+                          <li>Checks the target added events listeners</li>
+                        </ul>
+                        <li>Bubbling:</li>
+                        <ul>
+                          <li>Checks the ascendants added events listeners</li>
+                        </ul>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <br>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>
+                      <span>Inline event handler:</span>
+                      <br>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/slzno"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Using the DOM and the Event object:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/BpfGv"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Document and Window events:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/oGzqs"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Mouse events:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/dmeJH"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Focus related events:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/thvjC"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Keyboard events:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/jEvzc"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with events:
+                  <ul>
+                    <li>Form events:</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HtGbk"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using element specific objects:
+                  <ul>
+                    <li>base element (HTMLBaseElement):</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/tiEsw"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using element specific objects:
+                  <ul>
+                    <li>body element (HTMLBodyElement):</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/xFnsD"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using element specific objects:
+                  <ul>
+                    <li>link element (HTMLLinkElement):</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/hmwfb"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>6. Javascript in-depth</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using element specific objects:
+                  <ul>
+                    <li>meta element (HTMLMetaElement):</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/uLfJB"></iframe>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>HTML5 introduces a whole new set of APIs to extend the capabilities of the browsers and consequently of the web applications built upon:</li>
+                <ul>
+                  <li>
+                    <a href="http://platform.html5.org/">http://platform.html5.org/</a>
+                    <br>
+                  </li>
+                  <li>
+                    <a href="http://mobilehtml5.org/">http://mobilehtml5.org/</a>
+                    <br>
+                  </li>
+                </ul>
+                <li>Nowadays, it is possible to build native-like web applications which run in browsers</li>
+                <li>There are even web-oriented operating systems:</li>
+                <ul>
+                  <li>Web OS:&nbsp;
+                    <a href="https://www.openwebosproject.org/">https://www.openwebosproject.org/</a>
+                  </li>
+                  <li>Chromium OS:&nbsp;
+                    <a href="http://www.chromium.org/chromium-os">http://www.chromium.org/chromium-os</a>
+                  </li>
+                  <li>EyeOS:&nbsp;
+                    <a href="http://www.eyeos.com/">http://www.eyeos.com/</a>
+                  </li>
+                  <li>Firefox OS:
+                    <a href="http://www.mozilla.org/en-US/firefox/os/">http://www.mozilla.org/en-US/firefox/os/</a>
+                    <br>
+                  </li>
+                  <li>Tizen:&nbsp;
+                    <a href="https://www.tizen.org/">https://www.tizen.org/</a>
+                  </li>
+                </ul>
+              </ul>
+              <br>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Let's back up a little bit...</li>
+                <li>AJAX:</li>
+                <ul>
+                  <li>
+                    <b>Asynchronous</b>JavaScript and XML (getting data)</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/lvfFg"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Let's back up a little bit...</li>
+                <li>AJAX:</li>
+                <ul>
+                  <li>
+                    <b>Asynchronous</b>JavaScript and XML (sending data)</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/spqHr"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Let's back up a little bit...</li>
+                <li>AJAX:</li>
+                <ul>
+                  <li>
+                    <b>Asynchronous</b>JavaScript and XML (sending files)</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/LJnis"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>
+                  <span>AJAX:</span>
+                </li>
+                <ul>
+                  <li>Exercise:
+                    <a href="http://www.html5rocks.com/en/tutorials/">HTML5Rocks tutorials</a>widget</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/FDcph"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with multimedia (audio and video):</li>
+                <ul>
+                  <li>Getting info</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/fbkIC"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Working with multimedia (audio and video):</li>
+                <ul>
+                  <li>Controlling the media playback:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/cJhmb"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>The so-called "Adobe Flash killer"</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/lALyg"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Drawing "images":</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/GEyBp"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Drawing using paths:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Gnjkz"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Clipping regions:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/yrFAH"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Drawing text:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/pHbGs"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Using shadows and transparency:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ohzsB"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Using transformations:</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/vxAhz"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Using the canvas:</li>
+                <ul>
+                  <li>Exercise: Drawing area</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/LItJK"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Drag and drop:</li>
+                <ul>
+                  <li>The basics</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/DAkjv"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Drag and drop:</li>
+                <ul>
+                  <li>Exercise: Shopping cart</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/jDoah"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Drag and drop:</li>
+                <ul>
+                  <li>Exercise: Shopping cart (using DataTransfer)</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/craIC"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Geolocation:</li>
+                <ul>
+                  <li>Not part of the HTML5 specification</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/wpovg"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Geolocation:</li>
+                <ul>
+                  <li>Google Maps example</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/kswqt"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web storage:</li>
+                <ul>
+                  <li>localStorage</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/lvygB"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web storage:</li>
+                <ul>
+                  <li>sessionStorage</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/ILufv"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web storage:</li>
+                <ul>
+                  <li>Exercise: Saving drafts</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/itFck"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>IndexedDB:</li>
+                <ul>
+                  <li>Basic concepts:</li>
+                  <ul>
+                    <li>IndexedDB databases store key-value pairs:</li>
+                    <ul>
+                      <li>Values can be complex structured objects</li>
+                    </ul>
+                    <li>Transactional database model (
+                      <span>auto-commit)</span>
+                    </li>
+                    <li>Mostly asynchronous (synchronous version not very supported)</li>
+                    <li>Same origin policy</li>
+                  </ul>
+                </ul>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ol>
+                <li>Open a database and start a transaction</li>
+                <li>Create an object store</li>
+                <li>Make a request to do some database operation, like adding or retrieving data</li>
+                <li>Wait for the operation to complete by listening to the right kind of DOM&nbsp;event</li>
+                <li>Do something with the results (which can be found on the request object)</li>
+              </ol>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>IndexedDB:</li>
+                <ul>
+                  <li>General usage</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/dvGHD"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>IndexedDB:</li>
+                <ul>
+                  <li>Exercise: To-Do app</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/HBxai"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>WebSockets:</li>
+                <ul>
+                  <li>Socket-oriented connections between the web browser and the server&nbsp;</li>
+                  <li>Single TCP connection:</li>
+                  <ul>
+                    <li>Not HTTP (avoiding HTTP overhead)</li>
+                    <li>Low latency</li>
+                    <li>Real-time communications</li>
+                  </ul>
+                  <li>Persistent connections</li>
+                  <li>Both parties can start sending data at any time (bidirectional)</li>
+                </ul>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>WebSockets:</li>
+                <ul>
+                  <li>Basic usage</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/anvqE"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web Workers:</li>
+                <ul>
+                  <li>Running scripts in background threads</li>
+                  <li>Once created, a worker can send messages to the spawning task by posting messages to an event handler specified by the creator</li>
+                  <li>They work within a global context different from the current window (using the window shortcut instead of self in order to get the current global scope within a Worker will return, in fact, an error)</li>
+                </ul>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web Workers:</li>
+                <ul>
+                  <li>Basic usage</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/Hnsbp"></iframe>
+            </div>
+          </section>
+          <section>
+            <h2>7. HTML5 APIs</h2>
+            <div style="float: left;">
+              <ul>
+                <li>Web Workers:</li>
+                <ul>
+                  <li>Exercise: Calculate prime numbers when animating</li>
+                </ul>
+              </ul>
+            </div>
+            <div style="height: 100%; margin: 0px; padding: 0px;">
+              <iframe style="width: 100%; height: 100%;" src="http://cdpn.io/JFDKx"></iframe>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+       // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+              return !document.body.classList;
+            }
+          }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+              return !!document.querySelector('[data-markdown]');
+            }
+          }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+              return !!document.querySelector('[data-markdown]');
+            }
+          }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+              return !!document.body.classList;
+            }
+          }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+              return !!document.body.classList;
+            }
+          }
+          // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+
+</html>
